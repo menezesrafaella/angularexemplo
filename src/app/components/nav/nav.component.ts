@@ -4,7 +4,7 @@ import { isNgTemplate } from '@angular/compiler';
 interface iItem {
   label: string;
   route: string;
-  ativo: boolean;
+  // ativo: boolean;
 }
 
 
@@ -18,22 +18,29 @@ export class NavComponent implements OnInit {
 
 
   itens: iItem[] = [
-    {ativo: true,
+    {
+      // ativo: true,
     label: "Home",
-    route: "/"
+    route: "/home"
     },
 
     {
-      ativo: false,
+      // ativo: false,
       label:"Sobre",
       route:"/sobre"
 
     },
     {
-      ativo:false,
+      // ativo:false,
       label:"Contato",
       route: "/contato"
+    },
+    {
+      // ativo:false,
+      label:"Cadastrar Produto",
+      route: "/novoproduto"
     }
+
   ]
 
   constructor() { 
@@ -42,16 +49,16 @@ export class NavComponent implements OnInit {
 
 //fazendo com que todos os itens fiquem inativos
 
-  destacar(item:iItem){
-    this.itens.forEach(
-    (item) => 
-      {item.ativo = false}
-    )
+//   destacar(item:iItem){
+//     this.itens.forEach(
+//     (item) => 
+//       {item.ativo = false}
+//     )
 
-//ativo o item
+// //ativo o item
 
-  item.ativo = true;
-    }
+//   item.ativo = true;
+//     }
 
   ngOnInit(): void {
   }

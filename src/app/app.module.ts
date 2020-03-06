@@ -11,6 +11,8 @@ import { GruposComponent } from './components/grupos/grupos.component';
 import { ListadeprodutosComponent } from './components/listadeprodutos/listadeprodutos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProdutoComponent } from './components/produto/produto.component';
+import { NovoProdutoComponent } from './components/novo-produto/novo-produto.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { ProdutoComponent } from './components/produto/produto.component';
     GruposComponent,
     ListadeprodutosComponent,
     ProdutoComponent,
+    NovoProdutoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

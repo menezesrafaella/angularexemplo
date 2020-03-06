@@ -1,7 +1,7 @@
 export class Produto{
-    constructor(public COD_PRODUTO:number, 
-        public _DESC: string, public _REG_ANVISA: string, 
-        public _FL_CONTROLADO: boolean, public _COD_GRUPO: number) {
+    constructor(public COD_PRODUTO?:number, 
+        public _DESC?: string, public _REG_ANVISA?: string, 
+        public _FL_CONTROLADO?: boolean, public _COD_GRUPO?: number) { //INTERROGAÇÃO SERVE PARA PREENCHIIMENTO OPTATIVO
     
     }
     public get DESC() : string {

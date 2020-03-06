@@ -3,9 +3,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item destaque">
-            <li [ngClass]="{'destaque': item.ativo}" *ngFor="let item of itens">
-                <a class="nav-link" (click)="destacar(item)" routerLink="{{item.route}}">{{item.label}}</a>
+            <li routerLinkActive='destaque' *ngFor="let item of itens">
+                <a class="nav-link" routerLink="{{item.route}}">{{item.label}}</a>
             </li>
         </ul>
     </div>
 </nav>
+<!-- [ngClass] = {'destaque': item.ativo} -->
