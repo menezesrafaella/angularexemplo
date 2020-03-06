@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {Grupo} from 'src/app/models/Grupo';
+import { ListadeprodutosComponent } from '../listadeprodutos/listadeprodutos.component';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,14 @@ import {Grupo} from 'src/app/models/Grupo';
 })
 export class HomeComponent implements OnInit {
 
+  @ViewChild('listaProd') lista: ListadeprodutosComponent
+
   constructor() { }
 
   listarGrupo(grupo:Grupo){
-    console.log(grupo)
+    this.lista.listarDoGrupo(grupo.cod);
+    console.log(this.lista.produtosListados)
+    
   }
 
   ngOnInit(): void {

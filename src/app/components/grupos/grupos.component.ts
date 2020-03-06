@@ -12,11 +12,13 @@ export class GruposComponent{
   public grupos: Grupo[] = [];
   @Output() grupoClicado= new EventEmitter();
 
+  private grupoTotal: Grupo = new Grupo(0, "Todos")
+
   constructor(private http:HttpService) { 
 
   this.http.getGrupos().subscribe(
     (data) => {
-      this.grupos = data
+      this.grupos = [this.grupoTotal, ...data]; // ... serve para adicionar mais de um elemento
     }
   );
   }
